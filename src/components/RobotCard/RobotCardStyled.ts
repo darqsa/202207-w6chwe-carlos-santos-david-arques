@@ -4,8 +4,8 @@ const RobotContainerStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 70%;
   margin: 0 auto;
+  width: 300px;
   .robot-container {
     &__image-container {
       display: flex;
@@ -13,10 +13,6 @@ const RobotContainerStyled = styled.div`
       justify-content: center;
       background-color: #917cbb;
       padding: 10px 0;
-    }
-
-    &__imgage {
-      width: 200px;
     }
 
     &__info-container {
@@ -31,12 +27,12 @@ const RobotContainerStyled = styled.div`
       margin: 0;
       font-size: 1.6em;
       padding-bottom: 5px;
-      margin: 0 20px;
+      margin: 0 35px;
     }
 
     &__statistics-list {
       padding: 0;
-      margin: 0 20px;
+      margin: 0 35px;
     }
 
     &__statistic-container {

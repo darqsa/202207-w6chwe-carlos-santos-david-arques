@@ -9,6 +9,7 @@ const RobotCard = (): JSX.Element => {
           src="https://cdn-icons-png.flaticon.com/512/1547/1547183.png"
           alt=""
           height={150}
+          width={150}
         />
       </div>
       <div className="robot-container__info-container">
