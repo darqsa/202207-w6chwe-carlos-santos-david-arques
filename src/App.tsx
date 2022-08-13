@@ -1,6 +1,7 @@
+
 import CardList from "./components/CardList/CardList";
 
-function App() {
+const App = () => {
   return <CardList />;
 }
 
