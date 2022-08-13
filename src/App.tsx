@@ -1,3 +1,8 @@
-const App = () => <h1>Hola Mundo</h1>;
+
+import CardList from "./components/CardList/CardList";
+
+const App = () => {
+  return <CardList />;
+}
 
 export default App;
