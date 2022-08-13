@@ -1,5 +1,7 @@
+import RobotCard from "./components/RobotCard/RobotCard";
+
 function App() {
-  return <div className="App">Hola</div>;
+  return <RobotCard />;
 }
 
 export default App;
