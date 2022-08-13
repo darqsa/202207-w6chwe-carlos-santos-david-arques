@@ -1,7 +1,7 @@
-import RobotCard from "./components/RobotCard/RobotCard";
+import CardList from "./components/CardList/CardList";
 
 function App() {
-  return <RobotCard />;
+  return <CardList />;
 }
 
 export default App;
