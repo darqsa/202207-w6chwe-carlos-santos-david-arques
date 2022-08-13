@@ -1,4 +1,5 @@
 import RobotCard from "../RobotCard/RobotCard";
+import { ListStyled } from "./CardListStyled";
 
 const CardList = (): JSX.Element => {
   const testRobots = [
@@ -23,7 +24,7 @@ const CardList = (): JSX.Element => {
     },
   ];
   return (
-    <ul className="card-list">
+    <ListStyled className="card-list">
       {testRobots.map((robot) => (
         <li className="card-list__item">
           <RobotCard
@@ -35,7 +36,7 @@ const CardList = (): JSX.Element => {
           />
         </li>
       ))}
-    </ul>
+    </ListStyled>
   );
 };
 export default CardList;
