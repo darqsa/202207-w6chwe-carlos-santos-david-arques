@@ -4,7 +4,7 @@ import fetchRobots from "../../../services/fetchApi";
 import { Robots } from "../models/Robot";
 import { loadRobots } from "../slices/robotsSlice";
 
-interface robotsApiResponse {
+interface RobotsApiResponse {
   robots: Robots;
 }
 
@@ -15,7 +15,7 @@ const useApi = () => {
 
   const useLoadRobots = () => {
     useEffect(() => {
-      fetchRobots(`${robotsApiUrl}`).then(({ robots }: robotsApiResponse) =>
+      fetchRobots(`${robotsApiUrl}`).then(({ robots }: RobotsApiResponse) =>
         dispatch(loadRobots(robots))
       );
     }, []);
