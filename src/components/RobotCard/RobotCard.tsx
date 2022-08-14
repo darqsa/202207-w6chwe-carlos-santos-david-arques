@@ -1,32 +1,49 @@
 import { RobotContainerStyled } from "./RobotCardStyled";
+interface RobotCardProps {
+  imageUrl: string;
+  name: string;
+  speedStat: number;
+  strengthStat: number;
+  creationDate: string;
+}
 
-const RobotCard = (): JSX.Element => {
+const RobotCard = ({
+  imageUrl,
+  name,
+  speedStat,
+  strengthStat,
+  creationDate,
+}: RobotCardProps): JSX.Element => {
   return (
     <RobotContainerStyled className="robot-container">
       <div className="robot-container__image-container">
         <img
           className="robot-container__image"
-          src="https://cdn-icons-png.flaticon.com/512/1547/1547183.png"
-          alt=""
+          src={imageUrl}
+          alt={`It's just a robot named ${name}`}
           height={150}
           width={150}
         />
       </div>
       <div className="robot-container__info-container">
-        <h2 className="robot-container__name">{"Robot Name"}</h2>
+        <h2 className="robot-container__name">{name}</h2>
         <ul className="robot-container__statistics-list">
           <li className="robot-container__statistic-container">
             <h3 className="robot-container__statistic">Speed: </h3>
-            <span className="robot-container__statistic-value">{"5"}</span>
+            <span className="robot-container__statistic-value">
+              {speedStat}
+            </span>
           </li>
           <li className="robot-container__statistic-container">
             <h3 className="robot-container__statistic">Strength: </h3>
-            <span className="robot-container__statistic-value">{"6"}</span>
+            <span className="robot-container__statistic-value">
+              {strengthStat}
+            </span>
           </li>
           <li className="robot-container__statistic-container">
             <h3 className="robot-container__statistic">Creation Date: </h3>
             <span className="robot-container__statistic-value">
-              {"22-2-2022"}
+              {creationDate}
             </span>
           </li>
         </ul>
