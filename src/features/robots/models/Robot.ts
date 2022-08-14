@@ -5,7 +5,7 @@ interface stats {
 }
 
 export interface Robot {
-  id?: number;
+  id: string;
   name: string;
   image: string;
   stats: stats;

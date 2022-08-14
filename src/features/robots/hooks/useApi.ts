@@ -1,13 +1,24 @@
+import { useEffect } from "react";
 import { useDispatch } from "react-redux";
+import fetchRobots from "../../../services/fetchApi";
 import { Robots } from "../models/Robot";
-import fetchRobots from "../services/fetchRobots";
 import { loadRobots } from "../slices/robotsSlice";
+
+interface robotsApiResponse {
+  robots: Robots;
+}
+
+const robotsApiUrl = process.env.REACT_APP_ROBOTS_API_URL;
 
 const useApi = () => {
   const dispatch = useDispatch();
 
   const useLoadRobots = () => {
-    fetchRobots().then((robots: Robots) => dispatch(loadRobots(robots)));
+    useEffect(() => {
+      fetchRobots(`${robotsApiUrl}`).then(({ robots }: robotsApiResponse) =>
+        dispatch(loadRobots(robots))
+      );
+    }, []);
   };
 
   return { useLoadRobots };
