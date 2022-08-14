@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given an App component When it's rendered and gets snapshotted Then it should show a show a snapshot of App 1`] = `
+<ul
+  className="sc-gsnTZi gYGEdK card-list"
+>
+  <li
+    className="card-list__item"
+  >
+    <div
+      className="sc-bczRLJ fvdWGA robot-container"
+    >
+      <div
+        className="robot-container__image-container"
+      >
+        <img
+          alt="It's just a robot named "
+          className="robot-container__image"
+          height={150}
+          src=""
+        />
+      </div>
+      <div
+        className="robot-container__info-container"
+      >
+        <h2
+          className="robot-container__name"
+        />
+        <ul
+          className="robot-container__statistics-list"
+        >
+          <li
+            className="robot-container__statistic-container"
+          >
+            <h3
+              className="robot-container__statistic"
+            >
+              Speed: 
+            </h3>
+            <span
+              className="robot-container__statistic-value"
+            >
+              1
+            </span>
+          </li>
+          <li
+            className="robot-container__statistic-container"
+          >
+            <h3
+              className="robot-container__statistic"
+            >
+              Strength: 
+            </h3>
+            <span
+              className="robot-container__statistic-value"
+            >
+              1
+            </span>
+          </li>
+          <li
+            className="robot-container__statistic-container"
+          >
+            <h3
+              className="robot-container__statistic"
+            >
+              Creation Date: 
+            </h3>
+            <span
+              className="robot-container__statistic-value"
+            />
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+</ul>
+`;

@@ -48,6 +48,8 @@
     ]
   },
   "devDependencies": {
-    "husky": "^8.0.0"
+    "@types/react-test-renderer": "^18.0.0",
+    "husky": "^8.0.0",
+    "react-test-renderer": "^18.2.0"
   }
 }
