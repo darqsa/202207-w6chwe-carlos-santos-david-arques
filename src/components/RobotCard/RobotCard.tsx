@@ -34,4 +34,5 @@ const RobotCard = (): JSX.Element => {
     </RobotContainerStyled>
   );
 };
+
 export default RobotCard;
