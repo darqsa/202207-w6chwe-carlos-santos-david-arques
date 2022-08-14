@@ -51,4 +51,5 @@ const RobotCard = ({
     </RobotContainerStyled>
   );
 };
+
 export default RobotCard;
