@@ -12,7 +12,7 @@ const RobotContainerStyled = styled.div`
       width: 100%;
       justify-content: center;
       background-color: #917cbb;
-      padding: 10px 0;
+      padding: 10px 0 0 0;
     }
 
     &__info-container {

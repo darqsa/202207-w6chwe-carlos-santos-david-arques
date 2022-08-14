@@ -22,7 +22,6 @@ const RobotCard = ({
           src={imageUrl}
           alt={`It's just a robot named ${name}`}
           height={150}
-          width={150}
         />
       </div>
       <div className="robot-container__info-container">
