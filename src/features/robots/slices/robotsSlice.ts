@@ -1,7 +1,14 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Robots } from "../models/Robot";
 
-const initialState: Robots = [];
+const initialState: Robots = [
+  {
+    id: "",
+    image: "",
+    name: "",
+    stats: { creationDate: "", speed: 1, strength: 1 },
+  },
+];
 
 const robotsSlice = createSlice({
   name: "robots",
