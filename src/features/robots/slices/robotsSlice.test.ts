@@ -13,6 +13,7 @@ describe("Given a robotsSlice function", () => {
             speed: 0,
             creationDate: "0",
           },
+          id: "",
         },
       ];
 
