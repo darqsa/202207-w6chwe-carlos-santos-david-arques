@@ -1,11 +1,14 @@
+import { AppContainerStyled } from "./AppStyled";
 import CardList from "./components/CardList/CardList";
 import NewRobot from "./components/Form/Form";
 
 const App = () => {
   return (
     <>
-      <NewRobot />
-      <CardList />
+      <AppContainerStyled>
+        <NewRobot />
+        <CardList />
+      </AppContainerStyled>
     </>
   );
 };

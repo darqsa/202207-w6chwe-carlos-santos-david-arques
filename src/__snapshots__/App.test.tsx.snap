@@ -42,10 +42,12 @@ Array [
       </label>
       <input
         id="speed"
+        max={10}
+        min={1}
         onChange={[Function]}
         required={true}
         type="number"
-        value={1}
+        value={0}
       />
       <label
         htmlFor="image"
@@ -54,18 +56,20 @@ Array [
       </label>
       <input
         id="strength"
+        max={10}
+        min={1}
         onChange={[Function]}
         required={true}
         type="number"
-        value={1}
+        value={0}
       />
       <label
-        htmlFor="date"
+        htmlFor="creationDate"
       >
         Creation Date: 
       </label>
       <input
-        id="date"
+        id="creationDate"
         onChange={[Function]}
         type="text"
         value=""

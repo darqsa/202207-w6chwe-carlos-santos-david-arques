@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import useApi from "../../features/robots/hooks/useApi";
 import { Robot } from "../../features/robots/models/Robot";
+import { FormContainerStyled } from "./FormStyled";
 
 const NewRobot = (): JSX.Element => {
   const { createRobot } = useApi();
@@ -10,18 +11,25 @@ const NewRobot = (): JSX.Element => {
     image: "",
     creationDate: "",
     stats: {
-      speed: 1,
-      strength: 1,
+      speed: 0,
+      strength: 0,
     },
   };
 
   const [newRobot, setNewRobot] = useState(initialRobot);
 
   const onChangeField = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setNewRobot({
-      ...newRobot,
-      [event.target.id]: event.target.value,
-    });
+    if (event.target.type === "number") {
+      setNewRobot({
+        ...newRobot,
+        stats: { ...newRobot.stats, [event.target.id]: event.target.value },
+      });
+    } else {
+      setNewRobot({
+        ...newRobot,
+        [event.target.id]: event.target.value,
+      });
+    }
   };
 
   const createNewRobot = (event: React.FormEvent<HTMLFormElement>) => {
@@ -32,57 +40,99 @@ const NewRobot = (): JSX.Element => {
     setNewRobot(initialRobot);
   };
 
-  const hasEmptyFields = newRobot.name === "" || newRobot.image === "";
+  const hasEmptyFields =
+    newRobot.name === "" ||
+    newRobot.image === "" ||
+    newRobot.creationDate === "" ||
+    newRobot.stats.speed === 0 ||
+    newRobot.stats.strength === 0;
 
   return (
     <>
-      <h2>New Robot</h2>
-      <form autoComplete="off" onSubmit={createNewRobot} noValidate>
-        <div>
-          <label htmlFor="name">Name: </label>
-          <input
-            type="text"
-            id="name"
-            value={newRobot.name}
-            onChange={onChangeField}
-            required
-          />
-          <label htmlFor="image">Image: </label>
-          <input
-            type="url"
-            id="image"
-            value={newRobot.image}
-            onChange={onChangeField}
-            required
-          />
-          <label htmlFor="speed">Speed: </label>
-          <input
-            type="number"
-            id="speed"
-            value={newRobot.stats.speed}
-            onChange={onChangeField}
-            required
-          />
-          <label htmlFor="image">Strength: </label>
-          <input
-            type="number"
-            id="strength"
-            value={newRobot.stats.strength}
-            onChange={onChangeField}
-            required
-          />
-          <label htmlFor="date">Creation Date: </label>
-          <input
-            type="text"
-            id="date"
-            value={newRobot.creationDate}
-            onChange={onChangeField}
-          />
+      <FormContainerStyled className="form-container">
+        <h2 className="form-container__title">Create Your Robot</h2>
+        <form
+          className="form-container__form"
+          autoComplete="off"
+          onSubmit={createNewRobot}
+          noValidate
+        >
+          <div className="form-container__item-container">
+            <label className="form-container__item-label" htmlFor="name">
+              Name:{" "}
+            </label>
+            <input
+              className="form-container__item"
+              type="text"
+              id="name"
+              value={newRobot.name}
+              onChange={onChangeField}
+              required
+            />
+          </div>
+          <div className="form-container__item-container">
+            <label htmlFor="image" className="form-container__item-label">
+              Image:{" "}
+            </label>
+            <input
+              className="form-container__item"
+              type="url"
+              id="image"
+              value={newRobot.image}
+              onChange={onChangeField}
+              required
+            />
+          </div>
+          <div className="form-container__item-container">
+            <label htmlFor="speed" className="form-container__item-label">
+              Speed:{" "}
+            </label>
+            <input
+              className="form-container__item"
+              type="number"
+              id="speed"
+              value={newRobot.stats.speed}
+              onChange={onChangeField}
+              required
+              max={10}
+              min={1}
+            />
+          </div>
+          <div className="form-container__item-container">
+            <label htmlFor="image" className="form-container__item-label">
+              Strength:{" "}
+            </label>
+            <input
+              className="form-container__item"
+              type="number"
+              id="strength"
+              value={newRobot.stats.strength}
+              onChange={onChangeField}
+              required
+              max={10}
+              min={1}
+            />
+          </div>
+          <div className="form-container__item-container">
+            <label
+              htmlFor="creationDate"
+              className="form-container__item-label"
+            >
+              Creation Date:{" "}
+            </label>
+            <input
+              className="form-container__item"
+              type="text"
+              id="creationDate"
+              value={newRobot.creationDate}
+              onChange={onChangeField}
+            />
+          </div>
           <button type="submit" disabled={hasEmptyFields}>
             Create
           </button>
-        </div>
-      </form>
+        </form>
+      </FormContainerStyled>
     </>
   );
 };
