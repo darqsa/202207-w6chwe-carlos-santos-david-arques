@@ -1,77 +1,155 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Given an App component When it's rendered and gets snapshotted Then it should show a show a snapshot of App 1`] = `
-<ul
-  className="sc-gsnTZi gYGEdK card-list"
->
-  <li
-    className="card-list__item"
+Array [
+  <h2>
+    New Robot
+  </h2>,
+  <form
+    autoComplete="off"
+    noValidate={true}
+    onSubmit={[Function]}
   >
-    <div
-      className="sc-bczRLJ fvdWGA robot-container"
+    <div>
+      <label
+        htmlFor="name"
+      >
+        Name: 
+      </label>
+      <input
+        id="name"
+        onChange={[Function]}
+        required={true}
+        type="text"
+        value=""
+      />
+      <label
+        htmlFor="image"
+      >
+        Image: 
+      </label>
+      <input
+        id="image"
+        onChange={[Function]}
+        required={true}
+        type="url"
+        value=""
+      />
+      <label
+        htmlFor="speed"
+      >
+        Speed: 
+      </label>
+      <input
+        id="speed"
+        onChange={[Function]}
+        required={true}
+        type="number"
+        value={1}
+      />
+      <label
+        htmlFor="image"
+      >
+        Strength: 
+      </label>
+      <input
+        id="strength"
+        onChange={[Function]}
+        required={true}
+        type="number"
+        value={1}
+      />
+      <label
+        htmlFor="date"
+      >
+        Creation Date: 
+      </label>
+      <input
+        id="date"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+      <button
+        disabled={true}
+        type="submit"
+      >
+        Create
+      </button>
+    </div>
+  </form>,
+  <ul
+    className="sc-gsnTZi gYGEdK card-list"
+  >
+    <li
+      className="card-list__item"
     >
       <div
-        className="robot-container__image-container"
+        className="sc-bczRLJ fvdWGA robot-container"
       >
-        <img
-          alt="It's just a robot named "
-          className="robot-container__image"
-          height={150}
-          src=""
-        />
-      </div>
-      <div
-        className="robot-container__info-container"
-      >
-        <h2
-          className="robot-container__name"
-        />
-        <ul
-          className="robot-container__statistics-list"
+        <div
+          className="robot-container__image-container"
         >
-          <li
-            className="robot-container__statistic-container"
+          <img
+            alt="It's just a robot named "
+            className="robot-container__image"
+            height={150}
+            src=""
+          />
+        </div>
+        <div
+          className="robot-container__info-container"
+        >
+          <h2
+            className="robot-container__name"
+          />
+          <ul
+            className="robot-container__statistics-list"
           >
-            <h3
-              className="robot-container__statistic"
+            <li
+              className="robot-container__statistic-container"
             >
-              Speed: 
-            </h3>
-            <span
-              className="robot-container__statistic-value"
+              <h3
+                className="robot-container__statistic"
+              >
+                Speed: 
+              </h3>
+              <span
+                className="robot-container__statistic-value"
+              >
+                1
+              </span>
+            </li>
+            <li
+              className="robot-container__statistic-container"
             >
-              1
-            </span>
-          </li>
-          <li
-            className="robot-container__statistic-container"
-          >
-            <h3
-              className="robot-container__statistic"
+              <h3
+                className="robot-container__statistic"
+              >
+                Strength: 
+              </h3>
+              <span
+                className="robot-container__statistic-value"
+              >
+                1
+              </span>
+            </li>
+            <li
+              className="robot-container__statistic-container"
             >
-              Strength: 
-            </h3>
-            <span
-              className="robot-container__statistic-value"
-            >
-              1
-            </span>
-          </li>
-          <li
-            className="robot-container__statistic-container"
-          >
-            <h3
-              className="robot-container__statistic"
-            >
-              Creation Date: 
-            </h3>
-            <span
-              className="robot-container__statistic-value"
-            />
-          </li>
-        </ul>
+              <h3
+                className="robot-container__statistic"
+              >
+                Creation Date: 
+              </h3>
+              <span
+                className="robot-container__statistic-value"
+              />
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </li>
-</ul>
+    </li>
+  </ul>,
+]
 `;

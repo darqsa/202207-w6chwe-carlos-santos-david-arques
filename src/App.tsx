@@ -1,7 +1,13 @@
 import CardList from "./components/CardList/CardList";
+import NewRobot from "./components/Form/Form";
 
 const App = () => {
-  return <CardList />;
+  return (
+    <>
+      <NewRobot />
+      <CardList />
+    </>
+  );
 };
 
 export default App;

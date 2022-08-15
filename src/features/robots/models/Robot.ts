@@ -1,13 +1,13 @@
 interface Stats {
   speed: number;
   strength: number;
-  creationDate: string;
 }
 
 export interface Robot {
-  id: string;
+  id?: string;
   name: string;
   image: string;
+  creationDate: string;
   stats: Stats;
 }
 
