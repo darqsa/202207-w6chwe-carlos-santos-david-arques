@@ -1,27 +1,22 @@
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import fetchRobots from "../../../services/fetchApi";
-import { Robots } from "../models/Robot";
-import { loadRobots } from "../slices/robotsSlice";
-
-interface RobotsApiResponse {
-  robots: Robots;
-}
+import { useCallback } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../../app/store";
+import fetchApi from "../../../services/fetchApi";
+import { loadRobotsAction } from "../slices/robotsSlice";
 
 const robotsApiUrl = process.env.REACT_APP_ROBOTS_API_URL;
 
 const useApi = () => {
   const dispatch = useDispatch();
+  const robots = useSelector((state: RootState) => state.robots);
 
-  const useLoadRobots = () => {
-    useEffect(() => {
-      fetchRobots(`${robotsApiUrl}`).then(({ robots }: RobotsApiResponse) =>
-        dispatch(loadRobots(robots))
-      );
-    }, []);
-  };
+  const loadRobots = useCallback(async () => {
+    const { robots } = await fetchApi(`${robotsApiUrl}`);
 
-  return { useLoadRobots };
+    dispatch(loadRobotsAction(robots));
+  }, [dispatch]);
+
+  return { robots, loadRobots };
 };
 
 export default useApi;
