@@ -1,5 +1,5 @@
 import { Robot } from "../models/Robot";
-import robotsReducer, { loadRobots } from "./robotsSlice";
+import robotsReducer, { loadRobotsAction } from "./robotsSlice";
 
 describe("Given a robotsSlice function", () => {
   describe("When it is called with a load action and an initial state", () => {
@@ -17,7 +17,7 @@ describe("Given a robotsSlice function", () => {
         },
       ];
 
-      const robots = robotsReducer(undefined, loadRobots(initialState));
+      const robots = robotsReducer(undefined, loadRobotsAction(initialState));
 
       expect(robots).toEqual(initialState);
     });
