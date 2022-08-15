@@ -128,7 +128,11 @@ const NewRobot = (): JSX.Element => {
               onChange={onChangeField}
             />
           </div>
-          <button type="submit" disabled={hasEmptyFields}>
+          <button
+            className="form-container__button"
+            type="submit"
+            disabled={hasEmptyFields}
+          >
             Create
           </button>
         </form>
