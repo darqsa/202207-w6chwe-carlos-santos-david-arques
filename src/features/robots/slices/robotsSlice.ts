@@ -1,12 +1,13 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Robots } from "../models/Robot";
+import { Robot, Robots } from "../models/Robot";
 
 const initialState: Robots = [
   {
     id: "",
     image: "",
     name: "",
-    stats: { creationDate: "", speed: 1, strength: 1 },
+    creationDate: "",
+    stats: { speed: 1, strength: 1 },
   },
 ];
 
@@ -17,8 +18,12 @@ const robotsSlice = createSlice({
     loadRobots(state, action: PayloadAction<Robots>) {
       return action.payload;
     },
+    addRobot: (previousRobots, action: PayloadAction<Robot>) => [
+      ...previousRobots,
+      action.payload,
+    ],
   },
 });
 
-export const { loadRobots } = robotsSlice.actions;
+export const { loadRobots, addRobot } = robotsSlice.actions;
 export default robotsSlice.reducer;

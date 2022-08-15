@@ -12,7 +12,7 @@ const CardList = (): JSX.Element => {
   return (
     <ListStyled className="card-list">
       {robots.map(
-        ({ id, image, name, stats: { speed, strength, creationDate } }) => (
+        ({ id, image, name, creationDate, stats: { speed, strength } }) => (
           <li className="card-list__item" key={id}>
             <RobotCard
               imageUrl={image}
