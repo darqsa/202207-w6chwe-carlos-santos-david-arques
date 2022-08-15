@@ -26,9 +26,9 @@ jest.mock("../../../services/fetchApi", () => () => ({
 }));
 
 describe("Given a useApi custom hook", () => {
-  describe("When its oadRobots function its invoked", () => {
-    describe("And fetchRobots returns a list with WallE and Lika", () => {
-      test("Then the robots returned by useAPI should be WallE and Laika", async () => {
+  describe("When its loadRobots function its invoked", () => {
+    describe("And fetchApi returns a list with WallE and Lika", () => {
+      test("Then I should call load Robots ActionCreator with the list of robots by calling dispatch", async () => {
         const expectedRobots: Robots = [
           {
             name: "testName",
