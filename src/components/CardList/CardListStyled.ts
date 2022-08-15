@@ -7,5 +7,6 @@ const ListStyled = styled.ul`
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  flex: 2;
 `;
 export { ListStyled };

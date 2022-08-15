@@ -8,10 +8,10 @@ describe("Given a robotsSlice function", () => {
         {
           name: "testName",
           image: "testImage",
+          creationDate: "0",
           stats: {
             strength: 0,
             speed: 0,
-            creationDate: "0",
           },
           id: "",
         },

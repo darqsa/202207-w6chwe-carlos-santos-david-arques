@@ -1,6 +1,7 @@
 import { act, renderHook, waitFor } from "@testing-library/react";
 import useApi from "./useApi";
 import { loadRobotsAction } from "../slices/robotsSlice";
+import { Robots } from "../models/Robot";
 
 const mockDispatch = jest.fn();
 
@@ -14,10 +15,10 @@ jest.mock("../../../services/fetchApi", () => () => ({
     {
       name: "testName",
       image: "testImage",
+      creationDate: "0",
       stats: {
         strength: 0,
         speed: 0,
-        creationDate: "0",
       },
       id: "",
     },
@@ -28,14 +29,14 @@ describe("Given a useApi custom hook", () => {
   describe("When its oadRobots function its invoked", () => {
     describe("And fetchRobots returns a list with WallE and Lika", () => {
       test("Then the robots returned by useAPI should be WallE and Laika", async () => {
-        const expectedRobots = [
+        const expectedRobots: Robots = [
           {
             name: "testName",
             image: "testImage",
+            creationDate: "0",
             stats: {
               strength: 0,
               speed: 0,
-              creationDate: "0",
             },
             id: "",
           },
