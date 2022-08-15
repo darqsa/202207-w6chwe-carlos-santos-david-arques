@@ -1,95 +1,138 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Given an App component When it's rendered and gets snapshotted Then it should show a show a snapshot of App 1`] = `
-Array [
-  <h2>
-    New Robot
-  </h2>,
-  <form
-    autoComplete="off"
-    noValidate={true}
-    onSubmit={[Function]}
+<div
+  className="sc-bczRLJ iZsZhA"
+>
+  <div
+    className="sc-hKMtZM kOyumT form-container"
   >
-    <div>
-      <label
-        htmlFor="name"
+    <h2
+      className="form-container__title"
+    >
+      Create Your Robot
+    </h2>
+    <form
+      autoComplete="off"
+      className="form-container__form"
+      noValidate={true}
+      onSubmit={[Function]}
+    >
+      <div
+        className="form-container__item-container"
       >
-        Name: 
-      </label>
-      <input
-        id="name"
-        onChange={[Function]}
-        required={true}
-        type="text"
-        value=""
-      />
-      <label
-        htmlFor="image"
+        <label
+          className="form-container__item-label"
+          htmlFor="name"
+        >
+          Name:
+           
+        </label>
+        <input
+          className="form-container__item"
+          id="name"
+          onChange={[Function]}
+          required={true}
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        className="form-container__item-container"
       >
-        Image: 
-      </label>
-      <input
-        id="image"
-        onChange={[Function]}
-        required={true}
-        type="url"
-        value=""
-      />
-      <label
-        htmlFor="speed"
+        <label
+          className="form-container__item-label"
+          htmlFor="image"
+        >
+          Image:
+           
+        </label>
+        <input
+          className="form-container__item"
+          id="image"
+          onChange={[Function]}
+          required={true}
+          type="url"
+          value=""
+        />
+      </div>
+      <div
+        className="form-container__item-container"
       >
-        Speed: 
-      </label>
-      <input
-        id="speed"
-        max={10}
-        min={1}
-        onChange={[Function]}
-        required={true}
-        type="number"
-        value={0}
-      />
-      <label
-        htmlFor="image"
+        <label
+          className="form-container__item-label"
+          htmlFor="speed"
+        >
+          Speed:
+           
+        </label>
+        <input
+          className="form-container__item"
+          id="speed"
+          max={10}
+          min={1}
+          onChange={[Function]}
+          required={true}
+          type="number"
+          value={0}
+        />
+      </div>
+      <div
+        className="form-container__item-container"
       >
-        Strength: 
-      </label>
-      <input
-        id="strength"
-        max={10}
-        min={1}
-        onChange={[Function]}
-        required={true}
-        type="number"
-        value={0}
-      />
-      <label
-        htmlFor="creationDate"
+        <label
+          className="form-container__item-label"
+          htmlFor="image"
+        >
+          Strength:
+           
+        </label>
+        <input
+          className="form-container__item"
+          id="strength"
+          max={10}
+          min={1}
+          onChange={[Function]}
+          required={true}
+          type="number"
+          value={0}
+        />
+      </div>
+      <div
+        className="form-container__item-container"
       >
-        Creation Date: 
-      </label>
-      <input
-        id="creationDate"
-        onChange={[Function]}
-        type="text"
-        value=""
-      />
+        <label
+          className="form-container__item-label"
+          htmlFor="creationDate"
+        >
+          Creation Date:
+           
+        </label>
+        <input
+          className="form-container__item"
+          id="creationDate"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </div>
       <button
+        className="form-container__button"
         disabled={true}
         type="submit"
       >
         Create
       </button>
-    </div>
-  </form>,
+    </form>
+  </div>
   <ul
-    className="sc-gsnTZi gYGEdK card-list"
+    className="sc-dkzDqf eRMssT card-list"
   >
     <li
       className="card-list__item"
     >
       <div
-        className="sc-bczRLJ fvdWGA robot-container"
+        className="sc-gsnTZi ktktXK robot-container"
       >
         <div
           className="robot-container__image-container"
@@ -154,6 +197,6 @@ Array [
         </div>
       </div>
     </li>
-  </ul>,
-]
+  </ul>
+</div>
 `;
