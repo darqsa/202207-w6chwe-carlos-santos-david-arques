@@ -5,7 +5,7 @@ exports[`Given an App component When it's rendered and gets snapshotted Then it 
   className="sc-bczRLJ iZsZhA"
 >
   <div
-    className="sc-hKMtZM kOyumT form-container"
+    className="sc-hKMtZM bXbRhA form-container"
   >
     <h2
       className="form-container__title"
