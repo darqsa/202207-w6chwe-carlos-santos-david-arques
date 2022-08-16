@@ -1,7 +1,6 @@
 import { useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../../app/store";
-import fetchApi from "../../../services/fetchApi";
 import { loadRobotsAction } from "../slices/robotsSlice";
 
 const robotsApiUrl = process.env.REACT_APP_ROBOTS_API_URL;
