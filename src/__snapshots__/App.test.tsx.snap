@@ -4,6 +4,11 @@ exports[`Given an App component When it's rendered and gets snapshotted Then it 
 <div
   className="sc-bczRLJ iZsZhA"
 >
+  <button
+    onClick={[Function]}
+  >
+    Login
+  </button>
   <div
     className="sc-hKMtZM bXbRhA form-container"
   >
@@ -112,7 +117,7 @@ exports[`Given an App component When it's rendered and gets snapshotted Then it 
           className="form-container__item"
           id="creationDate"
           onChange={[Function]}
-          type="text"
+          type="date"
           value=""
         />
       </div>

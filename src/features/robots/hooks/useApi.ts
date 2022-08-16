@@ -6,20 +6,20 @@ import { loadRobotsAction, addRobot } from "../slices/robotsSlice";
 import { PayloadAction } from "@reduxjs/toolkit";
 import { Robot } from "../models/Robot";
 
-const robotsApiUrl = process.env.REACT_APP_ROBOTS_API_URL;
+export const robotsApiUrl = process.env.REACT_APP_ROBOTS_API_URL;
 
 const useApi = () => {
   const dispatch = useDispatch();
   const robots = useSelector((state: RootState) => state.robots);
 
   const loadRobots = useCallback(async () => {
-    const { robots } = await fetchApi(`${robotsApiUrl}`);
+    const { robots } = await fetchApi(`${robotsApiUrl}robots`);
 
     dispatch(loadRobotsAction(robots));
   }, [dispatch]);
 
   const createRobot = async (newRobot: any) => {
-    const response = await fetch(`${robotsApiUrl}/create`, {
+    const response = await fetch(`${robotsApiUrl}robots/create`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
