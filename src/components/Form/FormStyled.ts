@@ -50,6 +50,14 @@ const FormContainerStyled = styled.div`
         background-color: #241a3f;
         color: white;
       }
+      &:disabled {
+        opacity: 30%;
+        cursor: default;
+        &:hover {
+          background-color: white;
+          color: black;
+        }
+      }
     }
   }
 `;
