@@ -12,7 +12,16 @@ const useApi = () => {
   const robots = useSelector((state: RootState) => state.robots);
 
   const loadRobots = useCallback(async () => {
-    const { robots } = await fetchApi(`${robotsApiUrl}`);
+    const token = localStorage.getItem("token");
+
+    const response = await fetch(`${robotsApiUrl}`, {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    const { robots } = await response.json();
 
     dispatch(loadRobotsAction(robots));
   }, [dispatch]);

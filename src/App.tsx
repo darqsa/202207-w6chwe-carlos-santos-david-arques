@@ -2,7 +2,7 @@ import CardList from "./components/CardList/CardList";
 import useApi from "./features/robots/hooks/useApi";
 
 const App = () => {
-  const { loginUser } = useApi();
+  const { loadRobots, loginUser } = useApi();
 
   const payloadTest = {
     id: "ffefewfw",
@@ -12,6 +12,7 @@ const App = () => {
   return (
     <>
       <button onClick={() => loginUser(payloadTest)}>Login</button>
+      <button onClick={() => loadRobots()}>Load Robots</button>
       <CardList />
     </>
   );
