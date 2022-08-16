@@ -34,6 +34,9 @@ const NewRobot = (): JSX.Element => {
 
   const createNewRobot = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    if (newRobot.creationDate === "") {
+      newRobot.creationDate = `${Date.now}`;
+    }
 
     createRobot(newRobot);
 
@@ -43,7 +46,6 @@ const NewRobot = (): JSX.Element => {
   const hasEmptyFields =
     newRobot.name === "" ||
     newRobot.image === "" ||
-    newRobot.creationDate === "" ||
     newRobot.stats.speed === 0 ||
     newRobot.stats.strength === 0;
 
