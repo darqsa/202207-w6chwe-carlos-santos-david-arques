@@ -19,7 +19,7 @@ const useApi = () => {
   }, [dispatch]);
 
   const createRobot = async (newRobot: any) => {
-    const response = await fetch(`${robotsApiUrl}/create`, {
+    const response = await fetch(`${robotsApiUrl}robots/create`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
