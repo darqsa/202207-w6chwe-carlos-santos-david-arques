@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
-const RobotContainerStyled = styled.div`
+const RobotContainerStyled = styled.article`
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
   width: 300px;
+
   .robot-container {
     &__image-container {
       display: flex;
@@ -45,6 +46,7 @@ const RobotContainerStyled = styled.div`
       font-weight: 500;
       margin: 0;
     }
+
     &__statistic-value {
       font-size: 1.3em;
       font-weight: 350;
@@ -52,4 +54,5 @@ const RobotContainerStyled = styled.div`
     }
   }
 `;
+
 export { RobotContainerStyled };
