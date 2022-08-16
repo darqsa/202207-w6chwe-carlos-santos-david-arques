@@ -1,13 +1,14 @@
-import { useSelector } from "react-redux";
-import { RootState } from "../../app/store";
+import { useEffect } from "react";
 import useApi from "../../features/robots/hooks/useApi";
 import RobotCard from "../RobotCard/RobotCard";
 import { ListStyled } from "./CardListStyled";
 
 const CardList = (): JSX.Element => {
-  const robots = useSelector((state: RootState) => state.robots);
-  const { useLoadRobots } = useApi();
-  useLoadRobots();
+  const { robots, loadRobots } = useApi();
+
+  useEffect(() => {
+    loadRobots();
+  }, [loadRobots]);
 
   return (
     <ListStyled className="card-list">
@@ -27,4 +28,5 @@ const CardList = (): JSX.Element => {
     </ListStyled>
   );
 };
+
 export default CardList;

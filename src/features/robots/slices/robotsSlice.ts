@@ -25,5 +25,5 @@ const robotsSlice = createSlice({
   },
 });
 
-export const { loadRobots, addRobot } = robotsSlice.actions;
+export const { loadRobots: loadRobotsAction, addRobot } = robotsSlice.actions;
 export default robotsSlice.reducer;
