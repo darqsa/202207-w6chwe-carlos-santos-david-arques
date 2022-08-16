@@ -9,4 +9,5 @@ const ListStyled = styled.ul`
   gap: 30px;
   flex: 2;
 `;
+
 export { ListStyled };
