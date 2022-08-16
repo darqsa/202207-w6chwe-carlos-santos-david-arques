@@ -124,7 +124,7 @@ const NewRobot = (): JSX.Element => {
             </label>
             <input
               className="form-container__item"
-              type="text"
+              type="date"
               id="creationDate"
               value={newRobot.creationDate}
               onChange={onChangeField}
