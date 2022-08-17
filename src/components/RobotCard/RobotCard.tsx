@@ -42,7 +42,7 @@ const RobotCard = ({
           <li className="robot-container__statistic-container">
             <h3 className="robot-container__statistic">Creation Date: </h3>
             <span className="robot-container__statistic-value">
-              {creationDate}
+              {creationDate.slice(0, 10)}
             </span>
           </li>
         </ul>
