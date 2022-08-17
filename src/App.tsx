@@ -3,6 +3,8 @@ import { useDispatch } from "react-redux";
 import { AppContainerStyled } from "./AppStyled";
 import CardList from "./components/CardList/CardList";
 import NewRobot from "./components/Form/Form";
+import Login from "./components/Login/Login";
+import Register from "./components/Register/Register";
 import { User } from "./features/users/models/User";
 import { loginUserAction } from "./features/users/slices/usersSlice";
 import fetchToken from "./utils/auth";
@@ -19,6 +21,8 @@ const App = () => {
   return (
     <>
       <AppContainerStyled>
+        <Login />
+        <Register />
         <NewRobot />
         <CardList />
       </AppContainerStyled>
