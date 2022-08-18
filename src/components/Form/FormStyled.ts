@@ -3,7 +3,7 @@ import styled from "styled-components";
 const FormContainerStyled = styled.div`
   display: flex;
   flex-direction: column;
-  flex: 0.7;
+  flex: 1;
   margin-top: 30px;
   padding: 15px 30px;
   background-color: #241a3f;

@@ -21,27 +21,27 @@ const Register = (): JSX.Element => {
     <>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="text">User:</label>
+          <label htmlFor="userName">User:</label>
           <input
             type="text"
             required
             autoComplete="off"
             onChange={handleChange}
-            id="password"
+            id="userName"
             value={formData.userName}
           />
         </div>
         <div>
-          <label htmlFor="password">Password:</label>
+          <label htmlFor="passWord">Password:</label>
           <input
             type="password"
             required
             onChange={handleChange}
-            id="password"
+            id="passWord"
             value={formData.passWord}
           />
         </div>
-        <button type="submit">Login</button>
+        <button type="submit">Regiser</button>
       </form>
     </>
   );
