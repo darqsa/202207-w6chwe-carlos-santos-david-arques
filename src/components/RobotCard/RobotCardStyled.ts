@@ -4,7 +4,7 @@ const RobotContainerStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
+  margin: 0;
   width: 300px;
   .robot-container {
     &__image-container {
@@ -17,7 +17,7 @@ const RobotContainerStyled = styled.div`
 
     &__info-container {
       background-color: #ebe7dd;
-      padding: 20px 0;
+      padding: 20px 0 40px 0;
       display: flex;
       flex-direction: column;
       width: 100%;

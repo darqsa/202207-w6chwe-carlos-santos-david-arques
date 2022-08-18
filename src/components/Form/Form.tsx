@@ -14,6 +14,10 @@ const NewRobot = (): JSX.Element => {
       speed: 0,
       strength: 0,
     },
+    owner: {
+      _id: "",
+      userName: "",
+    },
   };
 
   const [newRobot, setNewRobot] = useState(initialRobot);
@@ -37,7 +41,6 @@ const NewRobot = (): JSX.Element => {
     if (newRobot.creationDate === "") {
       newRobot.creationDate = `${Date.now()}`;
     }
-
     createRobot(newRobot);
 
     setNewRobot(initialRobot);
@@ -46,8 +49,10 @@ const NewRobot = (): JSX.Element => {
   const hasEmptyFields =
     newRobot.name === "" ||
     newRobot.image === "" ||
-    newRobot.stats.speed === 0 ||
-    newRobot.stats.strength === 0;
+    newRobot.stats.speed > 10 ||
+    newRobot.stats.strength > 10 ||
+    newRobot.stats.speed < 1 ||
+    newRobot.stats.strength < 1;
 
   return (
     <>
@@ -78,10 +83,10 @@ const NewRobot = (): JSX.Element => {
             </label>
             <input
               className="form-container__item"
-              type="url"
+              type="text"
               id="image"
               value={newRobot.image}
-              onChange={onChangeField}
+              onChange={onChangeField} //mirar como hacer upload image a un form con multer
               required
             />
           </div>

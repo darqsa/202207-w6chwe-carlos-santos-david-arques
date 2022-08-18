@@ -5,10 +5,12 @@ import fetchApi from "../../../services/fetchApi";
 import { loadRobotsAction, addRobot } from "../slices/robotsSlice";
 import { PayloadAction } from "@reduxjs/toolkit";
 import { Robot } from "../models/Robot";
+import { useAppSelector } from "../../../app/hooks";
 
 export const robotsApiUrl = process.env.REACT_APP_ROBOTS_API_URL;
 
 const useApi = () => {
+  const user = useAppSelector(({ users }) => users);
   const dispatch = useDispatch();
   const robots = useSelector((state: RootState) => state.robots);
 
@@ -23,6 +25,7 @@ const useApi = () => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        Authorization: `Bearer ${user.token}`,
       },
       body: JSON.stringify(newRobot),
     });

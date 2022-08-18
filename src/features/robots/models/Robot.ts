@@ -1,14 +1,16 @@
-interface Stats {
-  speed: number;
-  strength: number;
-}
-
 export interface Robot {
   id?: string;
   name: string;
   image: string;
   creationDate: string;
-  stats: Stats;
+  stats: {
+    speed: number;
+    strength: number;
+  };
+  owner: {
+    _id: string;
+    userName: string;
+  };
 }
 
 export type Robots = Array<Robot>;

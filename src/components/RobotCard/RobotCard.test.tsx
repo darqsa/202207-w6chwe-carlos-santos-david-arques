@@ -21,6 +21,7 @@ describe("Given a RobotCard component", () => {
           name=""
           speedStat={1}
           strengthStat={1}
+          owner=""
         />
       );
 
@@ -37,6 +38,7 @@ describe("Given a RobotCard component", () => {
           name={fakeRobot.name}
           speedStat={1}
           strengthStat={1}
+          owner=""
         />
       );
 
@@ -55,6 +57,7 @@ describe("Given a RobotCard component", () => {
           name=""
           speedStat={1}
           strengthStat={2}
+          owner=""
         />
       );
 

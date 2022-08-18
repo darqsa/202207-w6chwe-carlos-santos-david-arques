@@ -8,6 +8,10 @@ const initialState: Robots = [
     name: "",
     creationDate: "",
     stats: { speed: 1, strength: 1 },
+    owner: {
+      _id: "",
+      userName: "",
+    },
   },
 ];
 

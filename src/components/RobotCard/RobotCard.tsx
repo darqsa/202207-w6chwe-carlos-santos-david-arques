@@ -5,6 +5,7 @@ interface RobotCardProps {
   speedStat: number;
   strengthStat: number;
   creationDate: string;
+  owner: string;
 }
 
 const RobotCard = ({
@@ -13,6 +14,7 @@ const RobotCard = ({
   speedStat,
   strengthStat,
   creationDate,
+  owner,
 }: RobotCardProps): JSX.Element => {
   return (
     <RobotContainerStyled className="robot-container">
@@ -20,7 +22,7 @@ const RobotCard = ({
         <img
           className="robot-container__image"
           src={imageUrl}
-          alt={`It's just a robot named ${name}`}
+          alt={`It's just a robot`}
           height={150}
         />
       </div>
@@ -44,6 +46,10 @@ const RobotCard = ({
             <span className="robot-container__statistic-value">
               {creationDate.slice(0, 10)}
             </span>
+          </li>
+          <li className="robot-container__statistic-container">
+            <h3 className="robot-container__statistic">Owner: </h3>
+            <span className="robot-container__statistic-value">{owner}</span>
           </li>
         </ul>
       </div>

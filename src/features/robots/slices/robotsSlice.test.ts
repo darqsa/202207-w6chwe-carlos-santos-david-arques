@@ -14,6 +14,10 @@ describe("Given a robotsSlice function", () => {
             speed: 0,
           },
           id: "",
+          owner: {
+            _id: "",
+            userName: "",
+          },
         },
       ];
 
